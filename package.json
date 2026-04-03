@@ -95,6 +95,7 @@
     "zod": "^3.25.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.4.10",
     "@types/bun": "^1.2.0",
     "@types/diff": "^7.0.0",
     "@types/lodash-es": "^4.17.0",
@@ -112,7 +113,10 @@
   },
   "scripts": {
     "build": "bun build.ts",
-    "start": "bun dist/cli.js",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check src/",
+    "lint:fix": "biome check --write src/",
+    "check": "tsc --noEmit && biome check src/",
+    "start": "bun dist/cli.js"
   }
 }

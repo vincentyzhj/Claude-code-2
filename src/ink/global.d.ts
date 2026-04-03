@@ -1,5 +1,4 @@
-// Global type augmentations for Ink components
-import type { DOMElement } from './dom.js';
+
 
 declare global {
   namespace JSX {
